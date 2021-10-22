@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.header {
+  grid-area: 1 / 1 / 2 / 6; /*Example: Start from 1 row/ start from 1 col / end at 1nd row / end at 6 row */
+  background-color: #7a2525;
+  height: auto;
+  color: #f6f6f6;
+  padding: 2px 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #7a2525;
+}
+.navbar a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #f6f6f6;
+  padding: 7px;
+  text-align: center;
+  margin: 0px 5px;
+}
+.navbar a:hover {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fcd770;
+  padding: 7px;
+  text-align: center;
+  margin: 0px 5px;
+}
+.main {
+  grid-area: 2 / 1 / 5 / 6;
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 10px;
+}
+.about-us {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pricing {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desc-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.desc-text {
+  font-size: 18px;
+  text-align: center;
+}
+.footer {
+  grid-area: 5 / 1 / 6 / 6;
+  background-color: #7a2525;
+  color: #f6f6f6;
+  padding: 2px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.img-1 {
+  grid-area: 1 / 1 / 2 / 1;
+}
+
+.img-2 {
+  grid-area: 2 / 1 / 3 / 1;
+}
+
+.img-3 {
+  grid-area: 3 / 1 / 4 / 1;
+}
+
+.img-4 {
+  grid-area: 4 / 1 / 4 / 1;
+}
+.img-grid img {
+  height: 350px;
+  width: 300px;
+}
+
+.pricing-table {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 50%;
+  max-width: 50%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.pricing-table th,
+.pricing-table td {
+  text-align: center;
+  padding: 8px;
+}
+.pricing-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 15px;
+}
+
+.pricing-table th {
+  color: #7a2525;
+  background: #fcd770;
+}
+
+.pricing-table th:nth-child(odd) {
+  color: #fcd770;
+  background: #7a2525;
+}
+
+.pricing-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.contact-table {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 50%;
+  max-width: 50%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.contact-table th,
+.contact-table td {
+  text-align: center;
+  padding: 8px;
+}
+.contact-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 15px;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+  .img-1 {
+    margin-left: 0%;
+    grid-area: 1 / 1 / 1 / 1;
+  }
+
+  .img-2 {
+    margin-left: 0%;
+    grid-area: 1 / 2 / 1 / 2;
+  }
+
+  .img-3 {
+    margin-left: 0%;
+    grid-area: 2 / 1 / 2 / 1;
+  }
+
+  .img-4 {
+    margin-left: 0%;
+    grid-area: 2 / 2 / 2 / 2;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 1024px) {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+  .img-1 {
+    margin-left: 0%;
+    grid-area: 1 / 1 / 1 / 4;
+  }
+
+  .img-2 {
+    margin-left: 0%;
+    grid-area: 1 / 2 / 1 / 4;
+  }
+
+  .img-3 {
+    margin-left: 0%;
+    grid-area: 1 / 3 / 1 / 4;
+  }
+
+  .img-4 {
+    margin-left: 0%;
+    grid-area: 1 / 4 / 1 / 4;
+  }
+}
